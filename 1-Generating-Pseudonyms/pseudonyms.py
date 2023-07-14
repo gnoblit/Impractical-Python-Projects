@@ -1,56 +1,65 @@
-# Very simple program
+"""
+Generate funny names byy randomly combining names from 2 separate lists.
+Actually a simple exercise in understanding pydocstyle and pylint.
+"""
 
 ## Imports
-import sys # 
+import sys
 import random # Will randomly select names
 
-## Program
-print("Welcome to the Psych 'Sidekick Name Picker.'\n")
 
-# Provide tuples of first name
-first = ('Baby Oil', 'Bad News', 'Big Burps', "Bill 'Beenie-Weenie'",
-        "Bob 'Stinkbug'", 'Bowel Noises', 'Boxelder', "Bud 'Lite' ",
-        'Butterbean', 'Buttermilk', 'Buttocks', 'Chad', 'Chesterfield',
-        'Chewy', 'Chigger", "Cinnabuns', 'Cleet', 'Cornbread', 'Crab Meat',
-        'Crapps', 'Dark Skies', 'Dennis Clawhammer', 'Dicman', 'Elphonso',
-        'Fancypants', 'Figgs', 'Foncy', 'Gootsy', 'Greasy Jim', 'Huckleberry',
-        'Huggy', 'Ignatious', 'Jimbo', "Joe 'Pottin Soil'", 'Johnny',
-        'Lemongrass', 'Lil Debil', 'Longbranch', '"Lunch Money"',
-        'Mergatroid', '"Mr Peabody"', 'Oil-Can', 'Oinks', 'Old Scratch',
-        'Ovaltine', 'Pennywhistle', 'Pitchfork Ben', 'Potato Bug',
-        'Pushmeet','Rock Candy', 'Schlomo', 'Scratchensniff', 'Scut',
-        "Sid 'The Squirts'", 'Skidmark', 'Slaps', 'Snakes', 'Snoobs',
-        'Snorki', 'Soupcan Sam', 'Spitzitout', 'Squids', 'Stinky',
-        'Storyboard', 'Sweet Tea', 'TeeTee', 'Wheezy Joe',
-        "Winston 'Jazz Hands'", 'Worms')
+def main():
+    """Choose names at random from 2 tuples of names and print to screen."""
+    ## Program
+    print("Welcome to the Psych 'Sidekick Name Picker.'\n")
 
-# Provide tuple of last name
-last = ('Appleyard', 'Bigmeat', 'Bloominshine', 'Boogerbottom',
-        'Breedslovetrout', 'Butterbaugh', 'Clovenhoof', 'Clutterbuck',
-        'Cocktoasten', 'Endicott', 'Fewhairs', 'Gooberdapple', 'Goodensmith',
-        'Goodpasture', 'Guster', 'Henderson', 'Hooperbag', 'Hoosenater',
-        'Hootkins', 'Jefferson', 'Jenkins', 'Jingley-Schmidt', 'Johnson',
-        'Kingfish', 'Listenbee', "M'Bembo", 'McFadden', 'Moonshine', 'Nettles',
-        'Noseworthy', 'Olivetti', 'Outerbridge', 'Overpeck', 'Overturf',
-        'Oxhandler', 'Pealike', 'Pennywhistle', 'Peterson', 'Pieplow',
-        'Pinkerton', 'Porkins', 'Putney', 'Quakenbush', 'Rainwater',
-        'Rosenthal', 'Rubbins', 'Sackrider', 'Snuggleshine', 'Splern',
-        'Stevens', 'Stroganoff', 'Sugar-Gold', 'Swackhamer', 'Tippins',
-        'Turnipseed', 'Vinaigrette', 'Walkingstick', 'Wallbanger', 'Weewax',
-        'Weiners', 'Whipkey', 'Wigglesworth', 'Wimplesnatch', 'Winterkorn',
-        'Woolysocks')
+    # Provide tuples of first name
+    first = ('Baby Oil', 'Bad News', 'Big Burps', "Bill 'Beenie-Weenie'",
+            "Bob 'Stinkbug'", 'Bowel Noises', 'Boxelder', "Bud 'Lite' ",
+            'Butterbean', 'Buttermilk', 'Buttocks', 'Chad', 'Chesterfield',
+            'Chewy', 'Chigger", "Cinnabuns', 'Cleet', 'Cornbread', 'Crab Meat',
+            'Crapps', 'Dark Skies', 'Dennis Clawhammer', 'Dicman', 'Elphonso',
+            'Fancypants', 'Figgs', 'Foncy', 'Gootsy', 'Greasy Jim', 'Huckleberry',
+            'Huggy', 'Ignatious', 'Jimbo', "Joe 'Pottin Soil'", 'Johnny',
+            'Lemongrass', 'Lil Debil', 'Longbranch', '"Lunch Money"',
+            'Mergatroid', '"Mr Peabody"', 'Oil-Can', 'Oinks', 'Old Scratch',
+            'Ovaltine', 'Pennywhistle', 'Pitchfork Ben', 'Potato Bug',
+            'Pushmeet','Rock Candy', 'Schlomo', 'Scratchensniff', 'Scut',
+            "Sid 'The Squirts'", 'Skidmark', 'Slaps', 'Snakes', 'Snoobs',
+            'Snorki', 'Soupcan Sam', 'Spitzitout', 'Squids', 'Stinky',
+            'Storyboard', 'Sweet Tea', 'TeeTee', 'Wheezy Joe',
+            "Winston 'Jazz Hands'", 'Worms')
 
-# Keep providing names until user exits
-while True:
-    firstName = random.choice(first)
-    lastName = random.choice(last)
+    # Provide tuple of last name
+    last = ('Appleyard', 'Bigmeat', 'Bloominshine', 'Boogerbottom',
+            'Breedslovetrout', 'Butterbaugh', 'Clovenhoof', 'Clutterbuck',
+            'Cocktoasten', 'Endicott', 'Fewhairs', 'Gooberdapple', 'Goodensmith',
+            'Goodpasture', 'Guster', 'Henderson', 'Hooperbag', 'Hoosenater',
+            'Hootkins', 'Jefferson', 'Jenkins', 'Jingley-Schmidt', 'Johnson',
+            'Kingfish', 'Listenbee', "M'Bembo", 'McFadden', 'Moonshine', 'Nettles',
+            'Noseworthy', 'Olivetti', 'Outerbridge', 'Overpeck', 'Overturf',
+            'Oxhandler', 'Pealike', 'Pennywhistle', 'Peterson', 'Pieplow',
+            'Pinkerton', 'Porkins', 'Putney', 'Quakenbush', 'Rainwater',
+            'Rosenthal', 'Rubbins', 'Sackrider', 'Snuggleshine', 'Splern',
+            'Stevens', 'Stroganoff', 'Sugar-Gold', 'Swackhamer', 'Tippins',
+            'Turnipseed', 'Vinaigrette', 'Walkingstick', 'Wallbanger', 'Weewax',
+            'Weiners', 'Whipkey', 'Wigglesworth', 'Wimplesnatch', 'Winterkorn',
+            'Woolysocks')
 
-    print("\n\n")
-    print("{} {}".format(firstName, lastName), file=sys.stderr) # Trick into printing using redtext using file=sys.stderr
-    print("\n\n")
+    # Keep providing names until user exits
+    while True:
+        first_name = random.choice(first)
+        last_name = random.choice(last)
 
-    try_again = input("\n\nTry again? (Press Enter else n to quit)\n")
-    if try_again.lower() == 'n':
-        break
+        print("\n\n")
+        print(f"{first_name} {last_name}", file=sys.stderr) # Print using redtext w/ file=sys.stderr
+        print("\n\n")
 
-input("\nPress Enter to exit.")
+        try_again = input("\n\nTry again? (Press Enter else n to quit)\n")
+        if try_again.lower() == 'n':
+            break
+
+    input("\nPress Enter to exit.")
+
+if __name__ == "__main__":
+    main()
