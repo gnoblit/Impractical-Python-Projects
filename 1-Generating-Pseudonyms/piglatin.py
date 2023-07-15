@@ -25,6 +25,10 @@ def main():
         provided_word = input("\n\nPlease provide me with an English word: ")
         provided_word = provided_word.lower() # Work exclusively with lowercase
         
+        # Make sure word length is sufficiently long
+        while len(provided_word) < 3:
+            provided_word = input('\nPlease provide a word at least three characters long: ').lower()
+
         if provided_word[0] not in ('aeiou'): # Word starts with consonant
             altered_word = ''.join([provided_word[1].upper(), provided_word[2:], provided_word[0], 'ay']) # Move con. to end, add 'ay'
         else: # Word starts with vowel
