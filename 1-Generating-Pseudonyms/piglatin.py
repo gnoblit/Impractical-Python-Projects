@@ -1,4 +1,5 @@
 """
+Practice Project
 Generate the Pig Latin equivalent to a word
 """
 
